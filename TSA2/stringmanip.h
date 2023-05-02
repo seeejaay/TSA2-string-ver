@@ -10,11 +10,12 @@ private:
 	char* input1;
 	int capacity;
 public:
-	stringmanip(int cap=50);
+	stringmanip(int cap);
 	~stringmanip();
-	void convert(string& in);
-	/*void convert(string in, string in1);*/
-	int length(string& in);
+	void convert(char* in);
+	void convert(char* in, char* in1);
+	int length(char* in);
+	string compare(char* in, char* in1);
 	
 };
 

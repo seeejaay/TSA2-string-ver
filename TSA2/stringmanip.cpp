@@ -15,40 +15,39 @@ stringmanip::~stringmanip()
 	delete[] input1;
 }
 
-void stringmanip::convert(string& in)
+void stringmanip::convert(char * in)
 {
-	string inp;
-
-	inp = in;
-	for (int i = 0; inp[i] != '\0'; i++)
+	for (int i = 0; in[i] != '\0'; i++)
 	{
-		input[i] = inp[i];
+		input[i] = in[i];
 		input[i + 1] = '\0';
+		in[i] = '\0';
 	}
 }
 
-//void stringmanip::convert(string in, string in1)
-//{
-//	
-//
-//	for (int i = 0; in[i] != '\0'; i++)
-//	{
-//		input[i] = in[i];
-//		input[i + 1] = '\0';
-//	}
-//
-//	for (int i = 0; in1[i] != '\0'; i++)
-//	{
-//		input1[i] = in1[i];
-//		input1[i + 1] = '\0';
-//	}
-//}
+void stringmanip::convert(char* in, char* in1)
+{
+	
+	for (int i = 0; in[i] != '\0'; i++)
+	{
+		input[i] = in[i];
+		input[i + 1] = '\0';
+		in[i] = '\0';
+	}
+
+	for (int i = 0; in1[i] != '\0'; i++)
+	{
+		input1[i] = in1[i];
+		input1[i + 1] = '\0';
+		in1[i] = '\0';
+	}
+}
 
 
-int stringmanip::length(string& in)
+int stringmanip::length(char* in)
 {
 	convert(in);
-
+	
 	int counter;
 
 	for (counter= 0; input[counter] != '\0'; counter++);
@@ -57,3 +56,29 @@ int stringmanip::length(string& in)
 	return counter;
 }
 
+string stringmanip::compare(char *in,char*in1)
+{
+	convert(in, in1);
+
+	int inSize=0, in1Size=0;
+
+	while (input[inSize] != '\0')
+	{
+		inSize++;
+	}
+
+	while (input1[in1Size] != '\0')
+	{
+		in1Size++;
+	}
+
+	if (inSize > in1Size)
+	{
+		return input;
+	}
+	else if (in1Size > inSize)
+	{
+		return input1;
+	}
+	
+}
