@@ -16,7 +16,7 @@ public:
 	void convert(char* in, char* in1);
 	int length(char* in);
 	string compare(char* in, char* in1);
-	char concat(char* in, char* in1);
+	string concat(char* in, char* in1);
 };
 
 #endif 
