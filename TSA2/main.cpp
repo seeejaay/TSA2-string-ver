@@ -58,7 +58,7 @@ int main() {
             cout << "Second String: " << inp1 << endl;
 
             cout << "The concatenated string is: " << strmanip.concat(inp, inp1) << endl;
-        
+            break;
         case 4:
             exit(1);
         }
@@ -67,7 +67,7 @@ int main() {
         cin >> retry;
         cin.ignore();
         retry = toupper(retry);
-        system("cls");
+       
     } while (retry == 'Y');
     
 

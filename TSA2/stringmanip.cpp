@@ -88,8 +88,8 @@ string stringmanip::concat(char* in, char* in1)
 	convert(in, in1);
 
 	string inString = input;
-	string in1String = input1;
-	string output = inString + " " + in1String;
+	string in1String = input1;\
+	string output = inString +" " + in1String;
 
 
 	return output;
